@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="alarm1.css">
 </head>
 <body>
+    <!-- Main container for the clock and alarm functionalities -->
     <div class="clock">
+         <!-- Main heading for the clock display -->
         <h1>Alarm Clock</h1>
+         <!-- Container to display the current time -->
         <div id="current-time"></div>
+           <!-- Label for the date and time input fields -->
         <label for="alarmDate">Select Date And Time:</label>
+           <!-- Input field for selecting the alarm date -->
         <input type="date" id="alarmDate" class="alarm-input" min="">
+            <!-- Input field for selecting the alarm time -->
         <input type="time" id="alarm-time">
+         <!-- Image used as a button to set the alarm, with a plus sign icon -->
         <img id="set-alarm" src="plus.png" title="Set Alarm" alt="Plus Sign">
+          <!-- Container for listing set alarms -->
         <div id="alarmslistdiv" class="alarms"></div>
-        <!-- Audio element to play alarm sound -->
+        <!-- Audio element to play alarm sound when an alarm triggers -->
         <audio id="alarm-sound" src="alarm-sound.mp3" preload="auto"></audio>
     </div>
    
