@@ -1,58 +1,62 @@
+
+/* Basic styling for the body of the page */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #FF78AC;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    
+    display: flex; /* Use flexbox to center the content horizontally and vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #FF78AC; /* Light pink background color */
+    font-family: Arial, sans-serif; /* Font family for the page */
+    margin: 0; /* Remove default margin */
 }
-
+/* Styling for the clock container */
 .clock {
-    text-align: center;
-    background: #A8D5E3;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align text within the clock container */
+    background: #A8D5E3; /* Light blue background color */
+    padding: 20px; /* Add padding inside the clock container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth effect */
 }
-
+/* Styling for the current time display */
 #current-time {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2em; /* Large font size for the current time */
+    margin-bottom: 10px; /* Space below the current time display */
 }
-
+/* Styling for input fields and buttons */
 input, button {
-    padding: 10px;
-    margin: 5px;
-    font-size: 1em;
+    padding: 10px; /* Add padding inside input fields and buttons */
+    margin: 5px; /* Add margin around input fields and buttons */
+    font-size: 1em; /* Set font size for input fields and buttons */
 }
-
+/* Styling for images (e.g., icons) */
 img {
-    height: 25px;
-    width: 25px;
+    height: 25px; /* Fixed height for images */
+    width: 25px; /* Fixed width for images */
 }
 
+/* Styling for the alarms section */
 .alarms {
-    margin-top: 20px;
-    text-align: left;
-    color: white;
+    margin-top: 20px; /* Space above the alarms section */
+    text-align: left; /* Align text to the left */
+    color: white; /* White text color for readability */
 }
 
+/* Styling for each individual alarm item */
 .alarm {
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
-    font-size: 14px;
+    background-color: black; /* Black background color for each alarm */
+    border: 1px solid white; /* White border around each alarm */
+    border-radius: 5px; /* Rounded corners for each alarm */
+    padding: 10px; /* Padding inside each alarm item */
+    margin: 10px 0; /* Space above and below each alarm item */
+    display: flex; /* Use flexbox layout for alignment */
+    justify-content: space-between; /* Space out content horizontally */
+    align-items: center; /* Center content vertically */
+    animation: fadeIn 0.5s ease-in-out; /* Animation effect for fading in */
+    font-size: 14px; /* Font size for alarm text */
 }
 
+/* Keyframes for fadeIn animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; } /* Start with 0 opacity (invisible) */
+    to { opacity: 1; } /* End with 1 opacity (fully visible) */
 }
