@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateTime, 1000);
     //setting up the alarm 
     setAlarm.addEventListener('click', () => {
+         const now = new Date(); 
       //Constructs a Date object from the selected date and time inputs.
         const selectedDate = new Date(dateInput.value + "T" + alarmTimeInput.value);
 //Checks if both date and time inputs are provided.if not alert the user.
