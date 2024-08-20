@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FF78AC;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    
+}
+
+.clock {
+    text-align: center;
+    background: #A8D5E3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#current-time {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+}
+
+img {
+    height: 25px;
+    width: 25px;
+}
+
+.alarms {
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+}
+
+.alarm {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
