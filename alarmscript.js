@@ -11,20 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const contan = document.getElementById('alarmslistdiv');
     // Access the audio element
     const alarmSound = document.getElementById('alarm-sound'); 
-
+    // Access the stop button
+    const stopAlarmButton = document.getElementById('stop-alarm');
     // Array to store alarm times
     let alarmsArray = [];
     //count variable to check the number of alarms
     let count = 0;
-
     // Function to update the displayed current time.
     function updateTime() {
         const now = new Date(); 
         currentTimeDisplay.textContent = now.toLocaleTimeString();
     }
-
     // Call `updateTime` every 1000 milliseconds (1 second)
     setInterval(updateTime, 1000);
+    // Function to stop the alarm sound
+     function stopAlarm() {
+        alarmSound.pause(); // Stop the alarm sound
+        alarmSound.currentTime = 0; // Reset the sound to the beginning
+        stopAlarmButton.style.display = 'none'; // Hide the stop button
+    }
     //setting up the alarm 
     setAlarm.addEventListener('click', () => {
          const now = new Date(); 
@@ -61,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //Adds an event listener to the delete button to remove the alarm from the list, cancel the timeout, and decrement the alarm count.
             const deleteButton = alarmlistDiv.querySelector('.delete-alarm');
             deleteButton.addEventListener('click', () => {
+                   // Show a confirmation dialog
+                  if (window.confirm('Are you sure you want to delete this alarm?')) {
                 clearTimeout(alarmlistDiv.timeoutID);
                 alarmlistDiv.remove();
                 count--;
@@ -68,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (idx !== -1) {
                     alarmsArray.splice(idx, 1);
                 }
+             }
             });
 //Sets a timeout that triggers when the alarm is supposed to go off.
             const timeoutID = setTimeout(() => {
@@ -89,9 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
             //Updates the alarmsArray and increments the alarm count.
             alarmsArray.push(selectedDate.toString());
             count++;
+              alert(`Alarm set for ${selectedDate.toLocaleString()}.`);
         } else {
             //alert the user for reaching the max limit.
             alert('You can only set a maximum of 5 alarms.');
         }
     });
+         // Add event listener for the stop button
+     stopAlarmButton.addEventListener('click', stopAlarm);
 });
