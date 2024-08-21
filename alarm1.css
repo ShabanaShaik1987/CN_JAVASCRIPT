@@ -43,7 +43,7 @@ img {
 
 /* Styling for each individual alarm item */
 .alarm {
-    background-color: black; /* Black background color for each alarm */
+   background-color:  #FF78AC;  /* Pink background color for each alarm */
     border: 1px solid white; /* White border around each alarm */
     border-radius: 5px; /* Rounded corners for each alarm */
     padding: 10px; /* Padding inside each alarm item */
