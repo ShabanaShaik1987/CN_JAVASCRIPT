@@ -13,14 +13,23 @@
         <h1>Alarm Clock</h1>
          <!-- Container to display the current time -->
         <div id="current-time"></div>
-           <!-- Label for the date and time input fields -->
-        <label for="alarmDate">Select Date And Time:</label>
-           <!-- Input field for selecting the alarm date -->
+        <div>
+        <!-- Input field for selecting the alarm date -->
         <input type="date" id="alarmDate" class="alarm-input" min="">
-            <!-- Input field for selecting the alarm time -->
-        <input type="time" id="alarm-time">
+    </div> 
+          <!-- Input fields for setting the alarm -->
+       <input type="number" id="alarm-hours" min="1" max="12" placeholder="Hour"><b>:</b>
+       <input type="number" id="alarm-minutes" min="0" max="59" placeholder="Minutes"><b>:</b>
+       <input type="number" id="alarm-seconds" min="0" max="59" placeholder="Seconds">
+       <select id="alarm-ampm" >
+        <option hidden>AM/PM</option>
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+    </select>
          <!-- Image used as a button to set the alarm, with a plus sign icon -->
         <img id="set-alarm" src="plus.png" title="Set Alarm" alt="Plus Sign">
+         <!-- Image used as a button to reset the alarm, with a refresh sign icon -->
+        <img id="reset-alarm" src="reset .png" title="Reset Alaarm" alt="reset">
           <!-- Container for listing set alarms -->
         <div id="alarmslistdiv" class="alarms"></div>
         <!-- Audio element to play alarm sound when an alarm triggers -->
