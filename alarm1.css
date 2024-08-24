@@ -9,24 +9,31 @@ body {
     font-family: Arial, sans-serif; /* Font family for the page */
     margin: 0; /* Remove default margin */
 }
+
 /* Styling for the clock container */
 .clock {
     text-align: center; /* Center-align text within the clock container */
     background: #A8D5E3; /* Light blue background color */
+    color: blue;
     padding: 20px; /* Add padding inside the clock container */
-    border-radius: 10px; /* Rounded corners for the container */
+    border-radius: 60px; /* Rounded corners for the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth effect */
 }
 /* Styling for the current time display */
 #current-time {
+    color: deeppink;; 
     font-size: 2em; /* Large font size for the current time */
     margin-bottom: 10px; /* Space below the current time display */
+    animation: pulse 1.5s infinite; /* Pulsing effect for a dynamic look */
+    border:2px solid #A8D5E3;
 }
 /* Styling for input fields and buttons */
-input, button {
+input,button,select{
     padding: 10px; /* Add padding inside input fields and buttons */
+    border-radius: 10px; /* Rounded corners for the container */
     margin: 5px; /* Add margin around input fields and buttons */
     font-size: 1em; /* Set font size for input fields and buttons */
+    color:blue;
 }
 /* Styling for images (e.g., icons) */
 img {
@@ -54,9 +61,22 @@ img {
     animation: fadeIn 0.5s ease-in-out; /* Animation effect for fading in */
     font-size: 14px; /* Font size for alarm text */
 }
-
-/* Keyframes for fadeIn animation */
-@keyframes fadeIn {
-    from { opacity: 0; } /* Start with 0 opacity (invisible) */
-    to { opacity: 1; } /* End with 1 opacity (fully visible) */
+::placeholder {
+    color: blue;
+    
+  }
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
