@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
       
               const selectedDate = new Date(dateInput.value);
-              selectedDate.setHours(hours, minutes, seconds);
+              selectedDate.setHours(hours, minutes, seconds,0);
         //const selectedDate = new Date(dateInput.value + "T" + alarmHrsInput.value+":"+alarmMtsInput.value+":"+alarmSecInput.value+alarmAmpmInput.value);
 //Checks if both date and time inputs are provided.if not alert the user.
         if (!dateInput.value || !alarmHrsInput.value || !alarmMtsInput.value || !alarmSecInput.value || !ampm) {
